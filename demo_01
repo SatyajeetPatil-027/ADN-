@@ -1,0 +1,33 @@
+// See https://aka.ms/new-console-template for more information
+using System;
+namespace demo01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello world");
+            Console.WriteLine(3 - 3);
+            Console.WriteLine("addition:"+(3 + 3));
+            Console.WriteLine("multiplication of two numbers:2X2=" + (2 * 2));
+            Console.Write("Hello there");
+            Console.WriteLine(" I am here");
+
+            string name = "yash";
+            Console.WriteLine(name);
+
+            int myNum;
+            myNum = 15;
+            Console.WriteLine(myNum);
+
+            double num1 = 3.55D;
+            Console.WriteLine(num1);
+            char letter = 'W';
+            Console.WriteLine(letter);
+            bool isRight = true;
+            Console.WriteLine(isRight);
+            const int myNum1 = 34;
+            Console.WriteLine(num1);
+        }
+    }
+} 
