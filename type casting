@@ -1,0 +1,24 @@
+using System;
+namespace application
+{
+    class Code
+    {
+        static void Main(string[] args)
+        {
+            double myDouble = 45.666D;
+            int myInt = (int)myDouble;
+            Console.WriteLine(myDouble);
+            Console.WriteLine(myInt);
+
+            long myLong = 4551155822;
+            float myFloat = (float)myLong;
+            Console.WriteLine(myLong);
+            Console.WriteLine(myFloat);
+
+            char mychar = 'x';
+            int newInt = (int)mychar;
+            Console.WriteLine(mychar);
+            Console.WriteLine(newInt);
+        }
+    }
+}
