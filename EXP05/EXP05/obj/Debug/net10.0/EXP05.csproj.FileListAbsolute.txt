@@ -1,0 +1,14 @@
+C:\Users\HP\source\repos\EXP05\EXP05\bin\Debug\net10.0\EXP05.exe
+C:\Users\HP\source\repos\EXP05\EXP05\bin\Debug\net10.0\EXP05.deps.json
+C:\Users\HP\source\repos\EXP05\EXP05\bin\Debug\net10.0\EXP05.runtimeconfig.json
+C:\Users\HP\source\repos\EXP05\EXP05\bin\Debug\net10.0\EXP05.dll
+C:\Users\HP\source\repos\EXP05\EXP05\bin\Debug\net10.0\EXP05.pdb
+C:\Users\HP\source\repos\EXP05\EXP05\obj\Debug\net10.0\EXP05.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\EXP05\EXP05\obj\Debug\net10.0\EXP05.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\EXP05\EXP05\obj\Debug\net10.0\EXP05.AssemblyInfo.cs
+C:\Users\HP\source\repos\EXP05\EXP05\obj\Debug\net10.0\EXP05.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\EXP05\EXP05\obj\Debug\net10.0\EXP05.dll
+C:\Users\HP\source\repos\EXP05\EXP05\obj\Debug\net10.0\refint\EXP05.dll
+C:\Users\HP\source\repos\EXP05\EXP05\obj\Debug\net10.0\EXP05.pdb
+C:\Users\HP\source\repos\EXP05\EXP05\obj\Debug\net10.0\EXP05.genruntimeconfig.cache
+C:\Users\HP\source\repos\EXP05\EXP05\obj\Debug\net10.0\ref\EXP05.dll

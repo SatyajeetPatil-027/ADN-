@@ -1,0 +1,14 @@
+C:\Users\HP\source\repos\Exp02\Exp02\bin\Debug\net10.0\Exp02.exe
+C:\Users\HP\source\repos\Exp02\Exp02\bin\Debug\net10.0\Exp02.deps.json
+C:\Users\HP\source\repos\Exp02\Exp02\bin\Debug\net10.0\Exp02.runtimeconfig.json
+C:\Users\HP\source\repos\Exp02\Exp02\bin\Debug\net10.0\Exp02.dll
+C:\Users\HP\source\repos\Exp02\Exp02\bin\Debug\net10.0\Exp02.pdb
+C:\Users\HP\source\repos\Exp02\Exp02\obj\Debug\net10.0\Exp02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\Exp02\Exp02\obj\Debug\net10.0\Exp02.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\Exp02\Exp02\obj\Debug\net10.0\Exp02.AssemblyInfo.cs
+C:\Users\HP\source\repos\Exp02\Exp02\obj\Debug\net10.0\Exp02.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\Exp02\Exp02\obj\Debug\net10.0\Exp02.dll
+C:\Users\HP\source\repos\Exp02\Exp02\obj\Debug\net10.0\refint\Exp02.dll
+C:\Users\HP\source\repos\Exp02\Exp02\obj\Debug\net10.0\Exp02.pdb
+C:\Users\HP\source\repos\Exp02\Exp02\obj\Debug\net10.0\Exp02.genruntimeconfig.cache
+C:\Users\HP\source\repos\Exp02\Exp02\obj\Debug\net10.0\ref\Exp02.dll
