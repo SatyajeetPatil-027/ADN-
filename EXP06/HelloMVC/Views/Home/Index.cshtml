@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Message"]</h1>
+    <p>This is a basic <strong>ASP.NET Core MVC</strong> application.</p>
+
+    <div class="card mt-4 p-3 shadow-sm" style="max-width:500px; margin:auto;">
+        <h4>MVC Architecture</h4>
+        <table class="table table-bordered mt-2">
+            <thead class="table-dark">
+                <tr><th>Component</th><th>Role</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>MODEL</strong></td>
+                    <td>Represents the data and business logic of the application
+It's a plain C# class that holds properties
+Can interact with a database using Entity Framework</td>
+                </tr>
+                <tr>
+                    <td><strong>VIEW</strong></td>
+                    <td>Represents the User Interface — what the user sees in the browser
+Written in Razor syntax</td>
+                </tr>
+                <tr>
+                    <td><strong>CONTROLLER</strong></td>
+                    <td>The brain of the application — handles incoming HTTP requests
+Contains Action Methods (public methods that return responses)
+Decides which View to render and which Model data to pass</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a asp-controller="Home" asp-action="About" class="btn btn-primary mt-3">
+        View About Page
+    </a>
+</div>
