@@ -1,0 +1,78 @@
+@model campusMaintainance_Tracker.Models.MaintenanceRequest
+
+@{
+    ViewData["Title"] = "Edit Request";
+}
+
+<div class="container mt-4">
+    <h2>Edit Maintenance Request</h2>
+
+    <form asp-action="Edit" method="post" class="mt-3">
+        <input type="hidden" asp-for="RequestId" />
+        <input type="hidden" asp-for="RequestDate" />
+
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label"></label>
+            <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Category" class="form-label"></label>
+            <select asp-for="Category" class="form-control">
+                @foreach (var category in ViewBag.Categories)
+                {
+                    <option value="@category">@category</option>
+                }
+            </select>
+            <span asp-validation-for="Category" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Priority" class="form-label"></label>
+            <select asp-for="Priority" class="form-control">
+                @foreach (var priority in ViewBag.Priorities)
+                {
+                    <option value="@priority">@priority</option>
+                }
+            </select>
+            <span asp-validation-for="Priority" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Status" class="form-label"></label>
+            <select asp-for="Status" class="form-control">
+                @foreach (var status in ViewBag.StatusList)
+                {
+                    <option value="@status">@status</option>
+                }
+            </select>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Location" class="form-label"></label>
+            <input asp-for="Location" class="form-control" />
+            <span asp-validation-for="Location" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ExpectedCompletionDate" class="form-label"></label>
+            <input asp-for="ExpectedCompletionDate" type="date" class="form-control" />
+            <span asp-validation-for="ExpectedCompletionDate" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update Request</button>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

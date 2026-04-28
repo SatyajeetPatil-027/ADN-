@@ -1,0 +1,145 @@
+@model IEnumerable<campusMaintainance_Tracker.Models.MaintenanceRequest>
+
+@{
+    ViewData["Title"] = "Maintenance Requests";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-3">Campus Maintenance Request Tracker</h2>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5>Total</h5>
+                    <h3>@ViewBag.TotalRequests</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5>Pending</h5>
+                    <h3>@ViewBag.PendingRequests</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5>In Progress</h5>
+                    <h3>@ViewBag.InProgressRequests</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5>Completed</h5>
+                    <h3>@ViewBag.CompletedRequests</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a asp-action="Create" class="btn btn-primary mb-3">Create New Request</a>
+
+    <form method="get" asp-action="Index" class="row mb-3">
+        <div class="col-md-4">
+            <input type="text"
+                   name="searchText"
+                   value="@ViewBag.SearchText"
+                   class="form-control"
+                   placeholder="Search by title, description or location" />
+        </div>
+
+        <div class="col-md-3">
+            <select name="statusFilter" class="form-control">
+                <option value="">All Status</option>
+                @foreach (var status in ViewBag.StatusList)
+                {
+                    if (ViewBag.StatusFilter == status)
+                    {
+                        <option value="@status" selected>@status</option>
+                    }
+                    else
+                    {
+                        <option value="@status">@status</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <select name="categoryFilter" class="form-control">
+                <option value="">All Categories</option>
+                @foreach (var category in ViewBag.Categories)
+                {
+                    if (ViewBag.CategoryFilter == category)
+                    {
+                        <option value="@category" selected>@category</option>
+                    }
+                    else
+                    {
+                        <option value="@category">@category</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-success w-100">Filter</button>
+        </div>
+    </form>
+
+    <table class="table table-bordered table-striped shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Location</th>
+                <th>Request Date</th>
+                <th>Expected Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="8" class="text-center">No maintenance requests found.</td>
+                </tr>
+            }
+            else
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Title</td>
+                        <td>@item.Category</td>
+                        <td>@item.Priority</td>
+                        <td>@item.Status</td>
+                        <td>@item.Location</td>
+                        <td>@item.RequestDate.ToString("dd-MM-yyyy")</td>
+                        <td>
+                            @(item.ExpectedCompletionDate.HasValue
+                                ? item.ExpectedCompletionDate.Value.ToString("dd-MM-yyyy")
+                                : "Not Assigned")
+                        </td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.RequestId" class="btn btn-info btn-sm">Details</a>
+                            <a asp-action="Edit" asp-route-id="@item.RequestId" class="btn btn-warning btn-sm">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@item.RequestId" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

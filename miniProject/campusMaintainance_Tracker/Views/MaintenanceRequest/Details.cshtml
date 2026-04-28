@@ -1,0 +1,48 @@
+@model campusMaintainance_Tracker.Models.MaintenanceRequest
+
+@{
+    ViewData["Title"] = "Request Details";
+}
+
+<div class="container mt-4">
+    <h2>Maintenance Request Details</h2>
+
+    <div class="card shadow-sm mt-3">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Title</dt>
+                <dd class="col-sm-9">@Model.Title</dd>
+
+                <dt class="col-sm-3">Description</dt>
+                <dd class="col-sm-9">@Model.Description</dd>
+
+                <dt class="col-sm-3">Category</dt>
+                <dd class="col-sm-9">@Model.Category</dd>
+
+                <dt class="col-sm-3">Priority</dt>
+                <dd class="col-sm-9">@Model.Priority</dd>
+
+                <dt class="col-sm-3">Status</dt>
+                <dd class="col-sm-9">@Model.Status</dd>
+
+                <dt class="col-sm-3">Location</dt>
+                <dd class="col-sm-9">@Model.Location</dd>
+
+                <dt class="col-sm-3">Request Date</dt>
+                <dd class="col-sm-9">@Model.RequestDate.ToString("dd-MM-yyyy")</dd>
+
+                <dt class="col-sm-3">Expected Completion Date</dt>
+                <dd class="col-sm-9">
+                    @(Model.ExpectedCompletionDate.HasValue
+                        ? Model.ExpectedCompletionDate.Value.ToString("dd-MM-yyyy")
+                        : "Not Assigned")
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a asp-action="Edit" asp-route-id="@Model.RequestId" class="btn btn-warning">Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </div>
+</div>
